@@ -1,6 +1,6 @@
 """Emergency unit triage queue."""
 
 from .models import Patient, TriageLevel
-from .queue import TriageQueue
+from .queue import EmptyQueueError, TriageQueue
 
-__all__ = ["Patient", "TriageLevel", "TriageQueue"]
+__all__ = ["EmptyQueueError", "Patient", "TriageLevel", "TriageQueue"]
