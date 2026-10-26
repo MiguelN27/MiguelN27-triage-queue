@@ -1,17 +1,7 @@
 import unittest
 
+from tests.helpers import drain, queue_with
 from triage import EmptyQueueError, Patient, TriageQueue
-
-
-def queue_with(*patients):
-    queue = TriageQueue()
-    for patient in patients:
-        queue.enqueue(patient)
-    return queue
-
-
-def drain(queue):
-    return [queue.dequeue().name for _ in range(len(queue))]
 
 
 class EnqueueTests(unittest.TestCase):
